@@ -53,8 +53,8 @@ module.exports.getAbout = (req, res) => {
         author: "MS Đặng Ngọc Báu",
         lastUpdatedAt: new Date().valueOf(),
         books: {
-            oldTestament: "http://localhost:8000/api/books/old-testament",
-            newTestament: "http://localhost:8000/api/books/new-testament",
+            oldTestament: "http://18.144.100.185/api/books/old-testament",
+            newTestament: "http://18.144.100.185/api/books/new-testament",
             names: all.map(file => file.replace(".json", ""))
         }
     });
