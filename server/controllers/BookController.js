@@ -38,7 +38,7 @@ module.exports.getBooks = (req, res) => {
         const prefix = `./testaments/${oldTst.includes(file) ? "old" : "new"}`;
         const foundBook = JSON.parse(fs.readFileSync(`${prefix}/${file}`));
         return res.json({ book: foundBook });
-    } catch {
+    } catch (error) {
         return res.json({ message: "Book not found", keyword: keyword, book: null });
     }
 }
